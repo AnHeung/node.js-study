@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "botkit": "^0.6.21",
-    "slack-node": "^0.1.8"
+    "slack-node": "^0.1.8",
+    "xmlhttprequest": "^1.8.0"
   }
 }
