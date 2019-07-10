@@ -5,3 +5,8 @@ module.exports={
     odd,
     even
 };
+
+// exports.odd = "홀수임2";
+// exports.even = "짝수임2";
+
+console.log(module.exports === exports);
