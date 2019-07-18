@@ -60,7 +60,7 @@ const readFiles = () => {
 
     fs.readFile('./readme.txt',(err,data)=>{
 
-        console.log(data.toString());
+        console.log(`readme 값  : ${data.toString()} + value : ${value}`);
 
         if(err){
             throw err;

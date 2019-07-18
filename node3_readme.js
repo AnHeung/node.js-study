@@ -1,4 +1,10 @@
+
+
+
 const fs = require('fs');
+
+
+
 
 fs.readFile('./readme.txt', (err,data)=>{
     if(err){
