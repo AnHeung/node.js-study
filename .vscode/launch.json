@@ -8,16 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/node4_fsCreate.js"
+            "program": "${workspaceFolder}/node5_server3_cookie.js"
         },
-        
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Launch Chrome",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
-        }
-
     ]
 }
