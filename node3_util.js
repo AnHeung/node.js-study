@@ -20,3 +20,10 @@ randomBytePromise(64)
 .catch((err)=>{
     console.log(err);
 });
+
+const returnfuc = (x,y)=>x+y;
+
+const promiseReturn = util.promisify(returnfuc);
+
+promiseReturn(1,2).then(data=>console.log(console.log('data : ' , data)));
+

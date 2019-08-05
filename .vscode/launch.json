@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/node5_server3_cookie.js"
+            "program": "${workspaceFolder}/node6_restServer.js"
         },
     ]
 }

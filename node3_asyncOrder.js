@@ -5,9 +5,29 @@ let value = 0;
 
 console.log('시작');
 
+let path = './readme.txt';
+
+// fs.readFile(path, (err,data)=>{
+//     if(err){
+//         throw err;
+//     }
+//     console.log('1번',  data.toString());
+//     fs.readFile(path,(err,data)=>{
+//         if(err){
+//             throw err;
+//         }
+//         console.log('2번', data.toString());
+
+//         fs.readFile(path, (err,data)=>{
+//             if(err){
+//                 throw err;
+//             }
+//             console.log('3번' , data.toString());
+//         })
+//     })
+// })
 
 // const promise2 = new Promise((res,rej)=>{
-
 //     fs.readFile('./readme.txt',(err,data)=>{
 //         if(err){
 //             rej(err);
@@ -15,10 +35,8 @@ console.log('시작');
 //         value++;
 //         res(` 순서 : ${value}  값: ${data.toString()}`);
 //     });
-
 // }).then((data)=>{
 //     console.log(data);
-
 //     return new Promise((res,rej)=>{
 //         fs.readFile('./readme.txt',(err,data)=>{
 //             if(err){
@@ -28,10 +46,8 @@ console.log('시작');
 //             res(` 순서 : ${value}  값: ${data.toString()}`);
 //         });
 //     })
-
 // }).then((data)=>{
 //     console.log(data);
-
 //     return new Promise((res,rej)=>{
 //         fs.readFile('./readme.txt',(err,data)=>{
 //             if(err){
@@ -55,10 +71,9 @@ const testFun = async ()=>{
     const time3 = await readFiles();
     const time4 = await readFiles();
 }
-
 const readFiles = () => {
 
-    fs.readFile('./readme.txt',(err,data)=>{
+    fs.readFile(path ,(err,data)=>{
 
         console.log(`readme 값  : ${data.toString()} + value : ${value}`);
 
@@ -66,12 +81,11 @@ const readFiles = () => {
             throw err;
         }
         value++;
-        if(value == 3) console.log('끝');
+        if(value == 3) return console.log('끝');
 
         return new Promise((res)=>{
             res(`순서 : ${value}  값: ${data.toString()}`);
         });
     });
 };
-
 testFun();

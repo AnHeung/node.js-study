@@ -1,22 +1,22 @@
-// const secretId = process.env.SECRET_ID;
-// const secretCode = process.env.SECRET_CODE;
+const secretId = process.env.SECRET_ID;
+const secretCode = process.env.SECRET_CODE;
 
-// console.log(`secretId =  ${secretId} secretCode = ${secretCode}`);
+console.log(`secretId =  ${secretId} secretCode = ${secretCode}`);
 
-// setImmediate(()=>{
-//    console.log('immediate setImmediate'); 
-// });
+setImmediate(()=>{
+   console.log('immediate setImmediate'); 
+});
 
-// process.nextTick(()=>{
-//     console.log('immediate nextTick');
-// });
+process.nextTick(()=>{
+    console.log('immediate nextTick');
+});
 
-// setTimeout(()=>{
-//     console.log('timeout');
-// }, 0);
+setTimeout(()=>{
+    console.log('timeout');
+}, 0);
 
 
-// Promise.resolve().then(()=>console.log('promise'));
+Promise.resolve().then(()=>console.log('promise'));
 
 let i = 1;
 
@@ -28,3 +28,4 @@ setInterval(()=>{
     console.log(`처리되고 있는 값 : ${i} `);
     i++;
 } , 1000);
+

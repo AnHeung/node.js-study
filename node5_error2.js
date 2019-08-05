@@ -1,7 +1,8 @@
 const fs = require('fs');
 
 //fs.unlink ()
-//Asynchronously removes a file or symbolic link. No arguments other than a possible exception are given to the completion callback.
+//Asynchronously removes a file or symbolic link.
+// No arguments other than a possible exception are given to the completion callback.
 
 setInterval(()=>{
     fs.unlink('./abcdefg.js', (err)=>{
