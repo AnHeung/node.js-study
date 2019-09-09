@@ -34,6 +34,9 @@ const parseCookies =  (cookie = '') =>
         res.writeHead(200,{'Set-Cookie' : 'mycookie=test'});
         res.end('Hello Cookie');
     })
-    .listen(3000, ()=>{
+    .on('error', (err)=>{
+        console.log('err', err);
+    })
+    .listen(4000, ()=>{
         console.log('서버 대기중');
     })
