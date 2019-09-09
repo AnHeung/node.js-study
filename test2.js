@@ -1,6 +1,7 @@
 // const a  = {
 //     name : 'tom',
-//     age : 10
+//     age : 10,
+//     ref : {a:1}
 // }
 
 // const b = a;
@@ -8,27 +9,33 @@
 // const c = {...a};
 
 // c.name = 'jerry';
+// c.ref.a = 2;
 
-const original = { a: { b: 1 },anotherRandomValue: 11, anotherRandomArray: [22] };
+// console.log(c);
+// console.log(b);
+// console.log(a);
 
-// Always put the original with the spread operator first
-const falseCopy = { ...original, a: { b: 2 } };
 
-const cloneCopy = cloneObj(original);
+// const original = { a: { b: 1 },anotherRandomValue: 11, anotherRandomArray: [22] };
 
-const jsonCopy = JSON.parse(JSON.stringify(original));
+// // Always put the original with the spread operator first
+// const falseCopy = { ...original, a: { b: 2 } };
 
-console.log(original) // logs { a: { b: 1 }, anotherRandomValue: 42 }
-console.log(falseCopy) // logs { a: { b: 2 }, anotherRandomValue: 42 }
-console.log(jsonCopy) // logs { a: { b: 1 }, anotherRandomValue: 42 }
-console.log(cloneCopy) // logs { a: { b: 1 }, anotherRandomValue: 42 }
+// const cloneCopy = cloneObj(original);
 
-original.anotherRandomValue = 88;
-original.anotherRandomArray[0] = ':-(';
+// const jsonCopy = JSON.parse(JSON.stringify(original));
 
-console.log(original) // logs { a: { b: 1 }, anotherRandomValue: 42 }
-console.log(falseCopy) // logs { a: { b: 2 }, anotherRandomValue: 42 }
-console.log(jsonCopy) 
+// console.log(original) // logs { a: { b: 1 }, anotherRandomValue: 42 }
+// console.log(falseCopy) // logs { a: { b: 2 }, anotherRandomValue: 42 }
+// console.log(jsonCopy) // logs { a: { b: 1 }, anotherRandomValue: 42 }
+// console.log(cloneCopy) // logs { a: { b: 1 }, anotherRandomValue: 42 }
+
+// original.anotherRandomValue = 88;
+// original.anotherRandomArray[0] = ':-(';
+
+// console.log(original) // logs { a: { b: 1 }, anotherRandomValue: 42 }
+// console.log(falseCopy) // logs { a: { b: 2 }, anotherRandomValue: 42 }
+// console.log(jsonCopy) 
 
 
 
