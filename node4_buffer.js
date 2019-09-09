@@ -1,3 +1,5 @@
+
+
 const buffer = Buffer.from('나를 버퍼로 바꾸셈'); //문자열을 버퍼로 변경
 
 console.log('buffer', buffer);

@@ -11,3 +11,4 @@ const checkStringOddOrEven = ((str)=>{
 
 console.log(checkNum(9));
 console.log(checkStringOddOrEven('hellos'));
+
